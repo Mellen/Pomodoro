@@ -1,0 +1,12 @@
+﻿<Window x:Class="Pomodoro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pomodoro" Height="331" Width="394" Icon="/Pomodoro;component/pomodoro.ico" Opacity="1" OpacityMask="{x:Null}" WindowStyle="None" AllowsTransparency="True"  MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterScreen">
+    <Window.ContextMenu>
+        <ContextMenu Name="cmClose" Closed="cmClose_Click">Close</ContextMenu>
+    </Window.ContextMenu>
+    <Window.Background>
+        <ImageBrush ImageSource="/Pomodoro;component/tomato.png" />
+    </Window.Background>
+    <Button Content="START WORKING!" Height="21" Name="btnWork" Width="121" Click="btnWork_Click" />
+</Window>
