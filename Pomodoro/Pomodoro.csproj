@@ -97,7 +97,9 @@
   <ItemGroup>
     <Resource Include="pomodoro.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="README.txt" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="beeps.wav" />
   </ItemGroup>
