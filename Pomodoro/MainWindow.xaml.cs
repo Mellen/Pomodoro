@@ -30,6 +30,7 @@ namespace Pomodoro
             ContextMenuStrip cmsClose = new ContextMenuStrip();
             cmsClose.Items.Add(tmiClose);
             ni.ContextMenuStrip = cmsClose;
+            ni.BalloonTipText = "Pomodoro is in the tray, if you need to close it before the end of the Pomodoro Period.";
             ni.Visible = true;
         }
 
@@ -69,6 +70,11 @@ namespace Pomodoro
             int workTime = 60 * 1000 * (int)asr.GetValue("PomodoroPeriod", typeof(int));
             BackgroundWorker worker = (sender as BackgroundWorker);
             System.Threading.Thread.Sleep(workTime);
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            ni.ShowBalloonTip(2000);
         }
     }
 }
